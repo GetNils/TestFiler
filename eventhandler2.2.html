@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventhandlere</title>
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  div {
+    width: 80%;
+    height: 30%;
+    padding: 10px;
+    margin-top: 50px;
+    background-color: yellow;
+    color: black;
+    text-align: justify;
+  }
+  .sRek {
+    background-color: black;
+    color: white;
+    width: 80%;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+  <div ondblclick="myOndblclick()">
+    Lorem ipsum <i>Dobbelklikk på dette avsnittet</i> dolor sit amet consectetur adipisicing elit. Aliquid voluptatum perspiciatis, modi id dolore, quae dolorum quisquam mollitia delectus voluptatibus tempora veniam quibusdam itaque voluptate esse eaque.
+  </div>
+  <p id="demo"></p>
+  <br style="margin: 10px;">
+  <div oncontextmenu="myOncontextmenu()">
+    Lorem ipsum, <i>Høyreklikk i denne boksen</i> dolor sit amet consectetur adipisicing elit. Commodi asperiores velit provident placeat repudiandae, corrupti expedita fuga voluptates dicta dolorem?
+  </div>
+  <br style="margin: 10px;">
+  <p id="demo2"></p>
+  <br style="margin: 10px;">
+  <p class="sRek">Hva spiste du til frokost på mandag for 4 år siden?</p>
+  <input type="text" id="inText" onkeydown="myOnkeydown()">
+  <p id="demo3">Du spiste: </p>
+<script>
+/*function myOndblclick() {
+  document.getElementById("demo").innerHTML = "Bra jobba!";
+}*/
+function myOndblclick() {
+  document.getElementById("demo").innerHTML = "Bra jobba!";
+}
+function myOncontextmenu() {
+  let x = document.getElementById("demo2");
+  x.innerHTML = "Du høyreklikka inni boksen!";
+}
+function myOnkeydown() {
+ let x = document.getElementById("inText").value;
+ document.getElementById("demo3").innerHTML = "Du spiste: " + x;
+ //dette funker, men har skrivd "Du spiste: " på linje 41 og 55 hvordan henter jeg fra linje 41 uten å gjenta?
+}
+</script>
+
+</body>
+</html>
