@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Kodelås</title>
+  <style>
+    button {
+      padding: 5px;
+      margin: 5px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Lås opp med ditt passord</p>
+  <button onclick="passord()">1</button>
+  <button onclick="passord()">2</button>
+  <button onclick="passord()">3</button>
+  <br>
+  <button onclick="passord()">4</button>
+  <button onclick="passord()">5</button>
+  <button onclick="passord()">6</button>
+  <br>
+  <button onclick="passord()">7</button>
+  <button onclick="passord()">8</button>
+  <button onclick="passord()">9</button>
+  <div id="info">Ditt passord: </div>
+  <script>
+    var tall1 = '1';
+    var tall2 = '2';
+    var tall3 = '3';
+
+    function passord() {
+      document.getElementById('info').innerHTML = tall1 + '-' + tall2 + '-' + tall3;
+    }
+  </script>
+</body>
+
+</html>
